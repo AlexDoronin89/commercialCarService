@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 720px;
+  }
+
+  &__nav {
+    position: absolute;
+    z-index: 50;
+    width: 500px;
+    height: 450px;
+    background-color: var(--quill-gray);
+  }
+}
+
+.map {
+  height: 720px;
+}

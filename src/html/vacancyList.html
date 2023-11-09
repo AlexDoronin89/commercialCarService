@@ -1,0 +1,138 @@
+<section id="vacancylist" class="vacancyList">
+  <h2 class="vacancyList__mainTitle">Вакансии</h2>
+  <div class="container vacancyList__mainContainer">
+    <div class="container vacancyList__container">
+      <nav class="nav vacancyList__nav">
+        <h3 class="vacancyList__title">Управляющий</h3>
+        <h3 class="vacancyList__title">Требования:</h3>
+        <ul class="nav__vacancyList">
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement">Опыт работы в автосервисе</a>
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Умение и желание ремонтировать автомобили</a
+            >
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Умение работать с технической документацией</a
+            >
+          </li>
+        </ul>
+        <button id="vacancyApplicationBtn" class="vacancyList__btn">
+          Оставить заявку
+        </button>
+      </nav>
+      <nav class="nav vacancyList__nav">
+        <h3 class="vacancyList__title">Диагност</h3>
+        <h3 class="vacancyList__title">Требования:</h3>
+        <ul class="nav__vacancyList">
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement">Опыт работы в автосервисе</a>
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Знание диагностики и ремонта электронных систем автомобиля</a
+            >
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Умение работать с тестерами, осциллографами</a
+            >
+          </li>
+        </ul>
+        <button id="vacancyApplicationBtn" class="vacancyList__btn">
+          Оставить заявку
+        </button>
+      </nav>
+    </div>
+
+    <div class="container vacancyList__container">
+      <nav class="nav vacancyList__nav">
+        <h3 class="vacancyList__title">Слесарь автомеханик</h3>
+        <h3 class="vacancyList__title">Требования:</h3>
+        <ul class="nav__vacancyList">
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement">Опыт работы в автосервисе</a>
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Знание ремонта узлов (КПП‚ мостов‚ ДВС)
+            </a>
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Ответственность и пунктуальность</a
+            >
+          </li>
+        </ul>
+        <button id="vacancyApplicationBtn" class="vacancyList__btn">
+          Оставить заявку
+        </button>
+      </nav>
+
+      <nav class="nav vacancyList__nav">
+        <h3 class="vacancyList__title">Менеджер по продажам</h3>
+        <h3 class="vacancyList__title">Требования:</h3>
+        <ul class="nav__vacancyList">
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement"
+              >Опыт работы в продаже автозапчастей</a
+            >
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement">Знание 1C, Excel </a>
+          </li>
+          <li class="nav__vacancy">
+            <a class="nav__vacancyRequirement">Умение работать в команде</a>
+          </li>
+        </ul>
+        <button id="vacancyApplicationBtn" class="vacancyList__btn">
+          Оставить заявку
+        </button>
+      </nav>
+    </div>
+  </div>
+  <div id="vacancyApplication" class="modal-window">
+    <button id="applicationClose" class="modal-window__close">X</button>
+    <div class="container modal-window__vacancy">
+      <a class="modal-window__info">Заполните ваши данные</a>
+      <nav class="nav modal-window__nav">
+        <a class="nav__modal-windowUserName">Ваше имя</a>
+        <input
+          id="userNameResumeInput"
+          type="text"
+          class="nav__modal-windowInputUserName"
+          placeholder="Иван"
+        />
+        <label id="userNameErrorResume" class="nav__userErrorModal"
+          >Обязательное поле</label
+        >
+        <a class="nav__modal-windowUserPhoneNum">Ваш номер телефона</a>
+        <input
+          id="userPhoneNumResumeInput"
+          type="text"
+          class="nav__modal-windowInputUserPhoneNum"
+          placeholder="+7 (999) 999 99 99"
+        />
+        <label id="userPhoneNumErrorResume" class="nav__userErrorModal"
+          >Обязательное поле</label
+        >
+        <a class="nav__modal-windowUserPhoneNum">Ваше краткое резюме</a>
+        <textarea
+          id="userResumeInput"
+          type="text"
+          class="nav__modal-windowInputUserResume"
+          placeholder="К примеру напишите: сколько вам лет, где работали и какой у вас опыт работы и другую информацию о себе"
+        ></textarea>
+        <label id="userErrorResume" class="nav__userErrorModal"
+          >Обязательное поле</label
+        >
+        <button id="resumeApplicationBtn" class="modal-window__btn">
+          Оставить заявку
+        </button>
+      </nav>
+    </div>
+  </div>
+</section>

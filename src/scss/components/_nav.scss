@@ -1,0 +1,297 @@
+.nav {
+  &__list {
+    padding: 0px 0px 0px 128px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 24px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &-phone {
+    display: inline-block;
+    width: 64px;
+    height: 36.667px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--color-black);
+      object-fit: cover;
+    }
+  }
+
+  &__link {
+    color: var(--color-black);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-black);
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transition: opacity 0.15s;
+      }
+    }
+
+    &--current {
+      &::before {
+        opacity: 1;
+        transition: opacity 0.15s;
+      }
+    }
+  }
+
+  &__repairList {
+    margin: 0;
+    padding: 15px 0px 0px 5px;
+  }
+
+  &__repairItem {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__repairLink {
+    color: var(--color-gray);
+    font-family: "Russo One", sans-serif;
+    font-size: 32px;
+  }
+
+  &__leftPartList {
+    padding: 15px 0px 0px 5px;
+    margin: 0;
+    float: left;
+  }
+
+  &__partLink {
+    color: var(--color-gray);
+    font-family: "Russo One", sans-serif;
+    font-size: 32px;
+  }
+
+  &__partItem {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__rightPartList {
+    text-align: end;
+    padding: 15px 5px 0px 0px;
+    margin: 0;
+    float: right;
+  }
+
+  &__userName {
+    margin:0;
+    padding: 25px 0px 15px 0px;
+    color: var(--color-white);
+  }
+
+  &__userPhoneNum {
+    margin: 0px;
+    margin-bottom:15px;
+    color: var(--color-white);
+    width: auto;
+    height: 30px;
+  }
+
+  &__inputUserName {
+    position: relative;
+    padding: 0px 0px 0px 15px;
+    margin-bottom: 5px;
+    width: 480px;
+    height: 55px;
+    background-color: rgba(#1c1d1f, 0.5);
+    border: 2px solid #ffffff;
+    color: var(--color-white);
+  }
+
+  &__inputUserPhoneNum {
+    padding: 0px 0px 0px 15px;
+    margin-bottom: 5px;
+    width: 480px;
+    height: 55px;
+    background-color: rgba(#1c1d1f, 0.5);
+    border: 2px solid #ffffff;
+    color: var(--color-white);
+  }
+
+  &__infoItem {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__infoContact {
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 48px;
+  }
+
+  &__infoLink {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  &__infoLinkBold {
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 32px;
+  }
+
+  &__abzac {
+    margin: 0;
+  }
+
+  &__vacancyRequirement {
+    font-family: "Russo One", sans-serif;
+    font-size: 32px;
+    color: var(--color-gray);
+  }
+
+  &__vacancy {
+    margin: 0px 0px 20px 20px;
+    list-style-type: disc;
+    color: var(--color-gray);
+  }
+
+  &__repairItemTitle {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  &__repairListInfo {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__repairItemInfo {
+    display: block;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 24px;
+    color: var(--color-gray);
+    width: 400px;
+    text-align: center;
+  }
+
+  &__repairBtns {
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+    width: 400px;
+    padding: 0;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__repairBtnsWide {
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+    width: 450px;
+    padding: 0;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__repairItemInfoWide {
+    display: block;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 24px;
+    color: var(--color-gray);
+    width: 450px;
+    text-align: center;
+  }
+
+  &__modal-windowUserName {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0px 0px 15px 0px;
+  }
+
+  &__modal-windowUserPhoneNum {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 15px 0px 15px 0px;
+  }
+
+  &__modal-windowInputUserName {
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #c9c9c9;
+    padding: 0px 0px 0px 15px;
+  }
+
+  &__modal-windowInputUserPhoneNum {
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #c9c9c9;
+    padding: 0px 0px 0px 15px;
+  }
+
+  &__repair_application_model-windowUserCarMake {
+    font-size: 32px;
+    font-weight: 400;
+    padding: 15px 0px 15px 0px;
+  }
+
+  &__repair_application_model-windowInputUserCarMake {
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #c9c9c9;
+    padding: 0px 0px 0px 15px;
+  }
+
+  &__modal-windowInputUserResume {
+    max-width: 550px;
+    height: 150px;
+  }
+
+  &__userErrorModal{
+    display: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: red;
+    margin: 5px;
+  }
+
+  &__carMakeListInfo{
+    padding: 0;
+    margin: 0;
+  }
+
+  &__userErrorOrder{
+    display: none;
+    position: absolute;
+    font-size: 13px;
+    font-weight: 500;
+    color: red;
+    margin: 0;
+    right: 320px;
+    float: right;
+  }
+
+}

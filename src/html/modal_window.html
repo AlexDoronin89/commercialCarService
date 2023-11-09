@@ -1,0 +1,30 @@
+<div id="my-modal1" class="modal-window">
+  <button id="modal-close" class="modal-window__close">X</button>
+  <div class="container modal-window__container">
+    <a class="modal-window__info">Заполните ваши данные</a>
+    <nav class="nav modal-window__nav">
+      <a class="nav__modal-windowUserName">Ваше имя</a>
+      <input
+        id="userNameInput"
+        class="nav__modal-windowInputUserName"
+        placeholder="Иван"
+      />
+      <label id="userNameErrorModal1" class="nav__userErrorModal"
+        >Обязательное поле</label
+      >
+      <a class="nav__modal-windowUserPhoneNum">Ваш номер телефона</a>
+      <input
+        id="userPhoneNumInput"
+        class="nav__modal-windowInputUserPhoneNum"
+        placeholder="+7 (999) 999 99 99"
+        maxlength="18"
+      />
+      <label id="userPhoneNumErrorModal1" class="nav__userErrorModal"
+        >Обязательное поле</label
+      >
+      <button id="sendApplication" class="modal-window__btn">
+        Оставить заявку
+      </button>
+    </nav>
+  </div>
+</div>

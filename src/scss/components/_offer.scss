@@ -1,0 +1,57 @@
+.offer{
+  position: relative;
+  min-height: 984px;
+  background-color: var(--quill-gray);
+  &__container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0px 309px;
+  }
+
+  &__mainTitle{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 115px 0px 125px 0px;
+    font-family: "Russo One",sans-serif;
+    font-size: 96px;
+  }
+
+  &__nav{
+    width: 450px;
+    height: 500px;
+    max-width: 450px;
+    max-height: 550px;
+    border-radius: 25px;
+    background-color: var(--color-white);
+  }
+
+  &__repairTitle{
+    margin: 0;
+    display: flex;
+    font-family: "Russo One",sans-serif;
+    font-size: 64px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__partTitle{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Russo One",sans-serif;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  &__details{
+    position: relative;
+    color: #0047ab;
+    font-family: "Russo One",sans-serif;
+    font-size: 32px;
+    top: 50px;
+    left: 5px;
+  }
+}

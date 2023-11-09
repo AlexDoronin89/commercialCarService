@@ -1,0 +1,764 @@
+.product {
+  display: block;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 20px;
+  padding-top: 9px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.product.hide {
+  display: none;
+}
+
+.product__btn {
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-white);
+  width: 100%;
+  height: 50px;
+  font-family: "Russo One", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #6078f1;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.product__image {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 162px;
+}
+
+.image-switch__img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-switch__img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-dark);
+  font-family: "Russo One", sans-serif;
+  font-size: 24px;
+}
+
+.product__testimonials {
+  color: var(--color-light);
+}
+
+.product__info {
+  display: flex;
+  margin-bottom: 17px;
+  font-size: 12px;
+  color: var(--color-light);
+}
+
+.product__term {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.product__available {
+  display: block;
+}
+
+.product-price {
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+}
+
+.product-price__current {
+  margin-right: 12px;
+  font-size: 24px;
+  color: var(--color-dark);
+}
+
+.product-price__old {
+  font-size: 12px;
+  color: var(--color-light);
+  text-decoration: line-through;
+}
+
+:root {
+  --gutter: 20px;
+}
+
+.products__container {
+  width: 100%;
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-gap: var(--gutter);
+}
+
+.products-grid {
+  padding: 0px 0px 0px 20px;
+  display: grid;
+  grid-gap: var(--gutter);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-slide {
+  flex: 0 0 1850px;
+  margin-right: 20px;
+}
+.product-slide:last-child {
+  margin-right: 0;
+}
+
+.slider-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.prev-button, .next-button {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.prev-button:hover, .next-button:hover {
+  background-color: #BCBCBC;
+}
+
+.next-button {
+  margin-left: 10px;
+}
+
+.product-slide.active {
+  border: 2px solid #6078f1;
+}
+
+.filters {
+  position: relative;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.page-buttons button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.page-buttons button.active {
+  text-decoration: underline;
+}
+
+.page-buttons button:hover {
+  background-color: #eee;
+}
+
+.filtersList {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;
+  z-index: 10;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.partStateFiltersList{
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;
+  z-index: 10;
+  border-radius: 15px;
+  width: auto;
+}
+
+.filterListItem {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.partStateFilterListItem{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+input[type=checkbox]{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.fiatFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -15px;
+    left: 75px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/fiat.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.peugeotFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -15px;
+    left: 135px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/peugeot.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.citroenFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -15px;
+    left: 135px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/citroen.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.ivecoFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -13px;
+    left: 100px;
+    content: "";
+    width: 100px;
+    height: 40px;
+    background-image: url("../../img/iveco.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.mercedesFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -15px;
+    left: 160px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/mercedes.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.fordFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -2px;
+    left: 90px;
+    content: "";
+    width: 60px;
+    height: 20px;
+    background-image: url("../../img/ford.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.renaultFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -10px;
+    left: 125px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/renault.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.volkswagenFilter {
+  &::after {
+    position: absolute;
+    margin-left: 5px;
+    top: -15px;
+    left: 195px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/volkswagen.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.carMake__filterSelect {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.partState__filterSelect{
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.partState__filterSelect::after {
+  content: "";
+  position: absolute;
+  margin-left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("../../img/arrow-down.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.carMake__filterSelect::after {
+  content: "";
+  position: absolute;
+  margin-left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("../../img/arrow-down.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carMake__filterSelect.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.partState__filterSelect.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.carMake__filter {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.partStateFilter{
+  position: relative;
+  margin-left: 50px;
+  width: auto;
+  height: auto;
+}
+
+.checkboxFilters{
+  position: relative;
+  display: flex;
+  top: 50px;
+  min-width: 450px;
+}
+
+.filters__input {
+  margin-bottom: 50px;
+  position: relative;
+  height: 75px;
+  left: 30%;
+  width:45%;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background: #fff;
+  font-family: "Russo One", sans-serif;
+  font-size: 32px;
+  padding-left: 1.5%;
+}
+
+.filters__title {
+  margin: 55px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Russo One", sans-serif;
+  font-size: 64px;
+}
+
+.fixed {
+  position: fixed;
+  top: var(--gutter);
+  left: 0;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+[data-simplebar] {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0;
+}
+
+.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.simplebar-content-wrapper {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  width: auto;
+  max-width: 100%; /* Not required for horizontal scroll to trigger */
+  max-height: 100%; /* Needed for vertical scroll to trigger */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.simplebar-content:before,
+.simplebar-content:after {
+  content: " ";
+  display: table;
+}
+
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  flex-grow: inherit;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 10px;
+}
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: black;
+  border-radius: 7px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.5;
+  transition: opacity 0s linear;
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
+
+/* Rtl support */
+[data-simplebar-direction="rtl"] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0;
+}
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.simplebar-hide-scrollbar {
+  position: fixed;
+  left: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

@@ -1,0 +1,80 @@
+.carMake {
+  width: 100%;
+  height: 1250px;
+  background-color: var(--quill-gray);
+
+  &__mainContainer {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    position: relative;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__mainTitle {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 6%;
+    font-family: "Russo One", sans-serif;
+    font-size: 64px;
+  }
+
+  &__models {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modelsTitle{
+    font-family: "Russo One",sans-serif;
+    font-size: 32px;
+  }
+
+  &__nav {
+    margin-bottom: 20%;
+    width: 350px;
+    height: 370px;
+    background-color: var(--quill-gray);
+    border-radius: 25px;
+  }
+
+  &__img{
+    width: 350px;
+  }
+
+  &__navFord{
+    width: 350px;
+    height: 320px;
+  }
+
+  &__btnContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Russo One",sans-serif;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color-white);
+    font-size: 64px;
+    width: 30%;
+    height: 10%;
+  }
+
+}

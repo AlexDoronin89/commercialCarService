@@ -1,0 +1,16 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/header";
+@import "./components/nav";
+@import "./components/service";
+@import "./components/offer";
+@import "./components/application";
+@import "./components/footer";
+@import "./components/vacancyList";
+@import "./components/repairList";
+@import "./components/modal-window";
+@import "./components/carMake";
+@import "./components/products";
